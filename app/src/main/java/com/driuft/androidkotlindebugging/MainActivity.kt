@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun launchHelloWorldActivity() {
-        val i = Intent(404 as Context, HelloWorldActivity::class.java)
+        //changed from "404 as Context" to "this"
+        val i = Intent(this, HelloWorldActivity::class.java)
         startActivity(i)
     }
 

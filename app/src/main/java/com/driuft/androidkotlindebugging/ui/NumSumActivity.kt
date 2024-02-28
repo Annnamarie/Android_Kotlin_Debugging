@@ -14,7 +14,10 @@ class NumSumActivity : AppCompatActivity() {
         setContentView(R.layout.activity_num_sum)
 
         val a = 2
-        val b = "2" as Int
+        // val b is declared as a string, not correctly changed to Int
+        //can properly change by using .toInt() or change the assigned value to 2 (not "2")
+        val b = "2".toInt()
+        //or val b = 2
 
         resultText.text = "${sumOfTwo(a, b)}"
     }
